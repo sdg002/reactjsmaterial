@@ -1,51 +1,16 @@
-# Demo of using Material UI
-
-# How to install?
-```
-npm install @material-ui/core
-```
-
-# You will need ?
-```
-npm install --save react-router-dom
-```
-
-
-# Very elementary tab example
-1. Displays tabs
-1. Not very interactive
-1. Does not hilight the selected tab
-1. No content within each tab panel
-
-```
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 
-class MyApp extends Component {
-    render() {
-        return (
-            <div>
-                <AppBar position="static" color="default">
-                    <Tabs textColor="primary">
-                        <Tab label="Item One"   />
-                        <Tab label="Item Two"   />
-                    </Tabs>
-                </AppBar>
-            </div>
-        );
-    }
-}
+/*
+Much better tabs
+Shows 3 tabs
+Shows the selection
 
-export default MyApp;           
-```
+*/
 
-
-# Tab with selection
-
-```
 class MyApp2 extends Component {
     constructor(props)
     {
@@ -79,4 +44,4 @@ class MyApp2 extends Component {
     }
 }
 
-```
+export default MyApp2;           

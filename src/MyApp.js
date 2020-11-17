@@ -4,6 +4,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 
+/*
+Very basic tabs
+Looks like a tab
+Not much interactivity
+Does not show selected tab
+*/
+
 class MyApp extends Component {
     render() {
         return (

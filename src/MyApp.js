@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 
 class MyApp extends Component {
     render() {
         return (
             <div>
-                <h1>Hello world of material ui inside my App you were here</h1>          
-                <ol>
-                    <li>Nav bar with material Tabs</li>
-                    <li>Let the Navbar be the entry into all future experiments</li>
-                    <li>Use Route and switch</li>
-                </ol>
+                <AppBar position="static" color="default">
+                    <Tabs textColor="primary">
+                        <Tab label="Item One"   />
+                        <Tab label="Item Two"   />
+                    </Tabs>
+                </AppBar>
             </div>
         );
     }

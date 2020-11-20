@@ -5,6 +5,7 @@ import MyApp2 from './MyApp2'
 import MyApp3 from './MyApp3'
 import TopNav from './components/TopNav'
 import TopNav2 from './components/TopNav2'
+import SampleToolbar from './components/SampleToolbar'
 import {HashRouter, Switch, Route} from "react-router-dom";
 
 
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/page2" exact>
             <div>This is page 2</div>
+          </Route>
+          <Route path="/SampleToolBar" exact>
+            <SampleToolbar></SampleToolbar>
           </Route>
           <Route path="/" exact>
             <div>This is when nothing is specified</div>

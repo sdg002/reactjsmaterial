@@ -13,14 +13,14 @@ function App() {
     <HashRouter>
       <TopNav2></TopNav2>
       <Switch>
-          <Route path="/" exact>
-            <div>This is page 0</div>
-          </Route>
-          <Route path="/page1">
+          <Route path="/page1" exact>
             <div>This is page 1</div>
           </Route>
-          <Route path="/page2" >
-          <div>This is page 2</div>
+          <Route path="/page2" exact>
+            <div>This is page 2</div>
+          </Route>
+          <Route path="/" exact>
+            <div>This is a catch all path</div>
           </Route>
         </Switch>                  
       

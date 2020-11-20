@@ -80,3 +80,63 @@ class MyApp2 extends Component {
 }
 
 ```
+
+# Tab with clickable links
+- You will have to use the `component` property and specify a `Link`
+- This will only work when placed inside a Router component
+```
+class TopNav2 extends Component {
+    constructor(props)
+    {
+        console.log("Inside ctor of TopNav2")
+        super(props)
+        this.state = {
+            value: 0
+          };
+    }
+    handleChange = (event, value) => {
+        //This is important - Otherwise the selection will not be shown
+        console.log(`Inside handleChange event value:${value}` )
+        this.setState({ value });
+      };
+
+    render() {
+        return (
+            <div>
+                <AppBar position="static">
+                    <Tabs 
+                        variant="fullWidth"
+                        aria-label="nav tabs example"
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                        indicatorColor="secondary"
+                        >
+                        <Tab label="Item One"  component={Link} to={'/page1'}></Tab>
+                        <Tab label="Item Two"  component={Link} to={'/page2'}></Tab>
+                    </Tabs>
+                </AppBar>
+            </div>
+        );
+    }
+}
+
+```
+
+## Switch
+```
+    <HashRouter>
+      <TopNav2></TopNav2>
+      <Switch>
+          <Route path="/" exact>
+            <div>This is page 0</div>
+          </Route>
+          <Route path="/page1">
+            <div>This is page 1</div>
+          </Route>
+          <Route path="/page2" >
+            <div>This is page 2</div>
+          </Route>
+        </Switch>                  
+      
+    </HashRouter>
+```

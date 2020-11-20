@@ -5,6 +5,10 @@ import TextField from '@material-ui/core/TextField';
 import Input from '@material-ui/core/Input';
 //import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
+import { Select } from '@material-ui/core';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import NativeSelect from '@material-ui/core/NativeSelect';
 
 
 // const myHook = makeStyles({
@@ -59,7 +63,8 @@ class SampleToolbar extends Component {
                         Secondary
                     </Button>
                     <TextField id="standard-basic" label="Standard" />
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                    <TextField id="outlined-basic" label="Outlined" variant="outlined" sizer="small" value="you were here, what is variant for TextField"/>
+                    
                     <Button variant="outlined" color="default" >Ok</Button>
                 </Toolbar>                
                 <hr/>
@@ -86,8 +91,109 @@ class SampleToolbar extends Component {
                     <label htmlFor="my-input">Email address</label>
                     <input id="my-input" aria-describedby="my-helper-text" />
                     <button>cool</button>
-                    <Button variant="outlined" color="default" >Ok</Button>
+                    <Button variant="outlined" color="default" variant="contained">Ok</Button>
+                    <Select>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                    </Select>
+                    <TextField
+                        label=""
+                        id="filled-margin-dense"
+                        defaultValue="Default Value"
+                        helperText="Some important text"
+                        margin="dense"
+                        variant="filled"
+                        />
+
+                    <TextField
+                        label="Dense 333 label"
+                        id="outlined-margin-dense"
+                        defaultValue="Default Value"
+                        helperText="Some important text"
+                        margin="dense"
+                        variant="outlined"
+                    />
+
+                    <TextField
+                        id="outlined-margin-dense1"
+                        defaultValue="Default Value no label"
+                        helperText="Some important text"
+                        margin="dense"
+                        variant="outlined"
+                    />
+                    <Button size="small" variant="contained" color="secondary">A button</Button>
+                    <Select>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                    </Select>
+                    <TextField
+                        label=""
+                        id="outlined-size-small"
+                        defaultValue="Small 123"
+                        variant="outlined"
+                        size="small"
+                        />
+
                 </Toolbar>
+                <hr/>
+                <h2>Within a form element 1</h2>
+                <form  noValidate autoComplete="off">
+                    <label htmlFor="picker1">Select search fields</label>
+                    <Select value={10} id="picker1">
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                    </Select>
+                    <Input defaultValue="Hello world" inputProps={{ 'aria-label': 'description' }} />
+                    <Button size="small" variant="contained" color="primary">Search</Button>
+                </form>
+                <hr/>
+                <h2>Within a form element 2</h2>
+                <form  noValidate autoComplete="off">
+                    <label htmlFor="picker1">Select search fields</label>
+                    <span>&nbsp;&nbsp;</span>
+                    <Select value={10} id="picker1" size="medium">
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                    </Select>
+                    <span>&nbsp;&nbsp;</span>
+                    <TextField
+                        label=""
+                        id="outlined-size-small"
+                        defaultValue="Small 123"
+                        variant="outlined"
+                        size="small"
+                        disableUnderline
+                        />
+                    <Button size="medium" variant="contained" color="primary">Search</Button>
+                </form>
+                <hr/>
+                    <InputLabel id="label">Age</InputLabel>
+                    <Select labelId="label" id="select" value="20">
+                        <MenuItem value="10">Ten</MenuItem>
+                        <MenuItem value="20">Twenty</MenuItem>
+                    </Select> 
+                <hr/>
+                <h2>Native Select</h2>
+                <label htmlFor="select002">Select search fields</label>
+                <span>&nbsp;&nbsp;</span>
+                <NativeSelect id="select002">
+                    <option value="10">Ten</option>
+                    <option value="20">Twenty</option>
+                </NativeSelect>
+
+                <span>&nbsp;&nbsp;</span>
+                <TextField
+                        label=""
+                        id="outlined-size-small"
+                        defaultValue="Small 123"
+                        variant="outlined"
+                        size="small"
+                        disableUnderline
+                        />
+                <span>&nbsp;&nbsp;</span>
+                <Button size="medium" variant="contained" color="primary">Search</Button>
+
+                <hr/>
                 <hr/>
             </div>
             

@@ -20,7 +20,10 @@ function App() {
             <div>This is page 2</div>
           </Route>
           <Route path="/" exact>
-            <div>This is a catch all path</div>
+            <div>This is when nothing is specified</div>
+          </Route>
+          <Route path="*" exact>
+            <div>This is a catch all path for non-existent link</div>
           </Route>
         </Switch>                  
       

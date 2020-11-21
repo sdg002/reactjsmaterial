@@ -6,6 +6,7 @@ import MyApp3 from './MyApp3'
 import TopNav from './components/TopNav'
 import TopNav2 from './components/TopNav2'
 import SampleToolbar from './components/SampleToolbar'
+import SimpleGrid from './components/SimpleGrid'
 import {HashRouter, Switch, Route} from "react-router-dom";
 
 
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/SampleToolBar" exact>
             <SampleToolbar></SampleToolbar>
+          </Route>
+          <Route path="/BasicGrid" exact>
+            <SimpleGrid></SimpleGrid>
           </Route>
           <Route path="/" exact>
             <div>This is when nothing is specified</div>

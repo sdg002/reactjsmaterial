@@ -34,6 +34,7 @@ class TopNav2 extends Component {
                         <Tab label="Item One"  component={Link} to={'/page1'}></Tab>
                         <Tab label="Item Two"  component={Link} to={'/page2'}></Tab>
                         <Tab label="Sample toolbar"  component={Link} to={'/SampleToolBar'}></Tab>
+                        <Tab label="Simple grid"  component={Link} to={'/BasicGrid'}></Tab>
                     </Tabs>
                 </AppBar>
             </div>

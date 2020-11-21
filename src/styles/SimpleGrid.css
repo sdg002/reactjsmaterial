@@ -1,0 +1,7 @@
+.MuiDataGrid-row.Mui-odd {
+    background-color: whitesmoke;
+  }
+
+  .MuiDataGrid-colCellTitle{
+    font-weight:bold !important; 
+}

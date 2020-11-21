@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { XGrid } from '@material-ui/x-grid';
-
+import '../styles/SimpleGrid.css'
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
@@ -44,7 +44,12 @@ class SimpleGrid extends Component {
             <div>
                 <h1>Basic grid test</h1>
                 <hr/>
-                <XGrid rows={rows} columns={columns}  checkboxSelection pageSize={10} autoHeight={true}/>                
+                <XGrid 
+                    rowHeight={30}
+                    rows={rows} 
+                    columns={columns}  
+                    checkboxSelection 
+                    pageSize={10} autoHeight={true}/>                
             </div>
         );
     }

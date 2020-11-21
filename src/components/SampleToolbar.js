@@ -9,7 +9,8 @@ import { Select } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
-
+import FormControl from '@material-ui/core/FormControl';
+import Typography from '@material-ui/core/Typography';
 
 // const myHook = makeStyles({
 //     root: {
@@ -151,7 +152,7 @@ class SampleToolbar extends Component {
                 <form  noValidate autoComplete="off">
                     <label htmlFor="picker1">Select search fields</label>
                     <span>&nbsp;&nbsp;</span>
-                    <Select value={10} id="picker1" size="medium">
+                    <Select value={10} id="picker1" size="small" variant="outlined">
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
                     </Select>
@@ -177,7 +178,7 @@ class SampleToolbar extends Component {
                 <form  noValidate autoComplete="off">
                     <label htmlFor="selectsearchfield">Select search fields</label>
                     <span>&nbsp;&nbsp;</span>
-                    <NativeSelect id="selectsearchfield" value={{}}>
+                    <NativeSelect id="selectsearchfield" value={{}} >
                         <option value="FirstName">FirstName</option>
                         <option value="LastName">LastName</option>
                     </NativeSelect>
@@ -188,8 +189,34 @@ class SampleToolbar extends Component {
                     <span>&nbsp;&nbsp;</span>
                     <Button size="medium" variant="contained" color="primary">Search</Button>
                 </form>
-
                 <hr/>
+                <h2>Stack overflow question</h2>
+                <a href='https://stackoverflow.com/questions/64938484/using-material-ui-for-creating-an-inline-form-with-label-text-select-and-button'>Link to question</a>
+                <p>Could not get it to work. The SELECT field is too large</p>
+                <form  noValidate autoComplete="off">
+                    <FormControl>
+                        <Typography variant="body1">Select search fields:</Typography>
+                    </FormControl>  
+                    <FormControl variant="outlined">
+                        <InputLabel id="select-label-001">Select field</InputLabel>
+                        <Select 
+                            labelId='select-label-001'
+                            label="Types"
+                            size="small"
+                            >
+                            <MenuItem value={'FirstName'}>Ten</MenuItem>
+                            <MenuItem value={'LastName'}>Twenty</MenuItem>
+                        </Select>                  
+
+                    </FormControl>
+                    <FormControl>
+                        <TextField
+                            label="Enter search pattern"
+                            variant="outlined"
+                            size="small"                            
+                        />
+                    </FormControl>
+                </form>
                 <hr/>
             </div>
             

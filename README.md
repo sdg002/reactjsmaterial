@@ -165,3 +165,48 @@ class TopNav2 extends Component {
     </HashRouter>
 
 ```
+
+# Simple buttons
+
+```
+                <Toolbar>
+                    <Button variant="contained" color="default" >
+                        Default
+                    </Button>
+                    <Button variant="contained" color="primary">
+                        Primary
+                    </Button>
+                    <Button variant="contained" color="secondary">
+                        Secondary
+                    </Button>
+                    <TextField id="standard-basic" label="Standard" />
+                    <TextField id="outlined-basic" label="Outlined" variant="outlined" sizer="small" value="you were here, what is variant for TextField"/>
+                    
+                    <Button variant="outlined" color="default" >Ok</Button>
+                </Toolbar>                
+
+```
+
+# Buttons with various sizes
+
+```
+                <h2>Buttons with various sizes</h2>
+                <div>
+
+                    <Button size="small" variant="contained" color="primary">
+                    Small primary
+                    </Button>
+                    <Button size="medium" variant="contained" color="secondary">
+                    Medium secondary
+                    </Button>
+                    <Button size="large" variant="contained" color="default">
+                    Large default
+                    </Button>
+                </div>
+
+```
+
+
+# Inline tool bar with - Search drop down, text box and button
+```
+```

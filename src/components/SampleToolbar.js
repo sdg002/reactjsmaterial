@@ -174,24 +174,20 @@ class SampleToolbar extends Component {
                     </Select> 
                 <hr/>
                 <h2>Native Select</h2>
-                <label htmlFor="select002">Select search fields</label>
-                <span>&nbsp;&nbsp;</span>
-                <NativeSelect id="select002">
-                    <option value="10">Ten</option>
-                    <option value="20">Twenty</option>
-                </NativeSelect>
+                <form  noValidate autoComplete="off">
+                    <label htmlFor="selectsearchfield">Select search fields</label>
+                    <span>&nbsp;&nbsp;</span>
+                    <NativeSelect id="selectsearchfield" value={{}}>
+                        <option value="FirstName">FirstName</option>
+                        <option value="LastName">LastName</option>
+                    </NativeSelect>
 
-                <span>&nbsp;&nbsp;</span>
-                <TextField
-                        label=""
-                        id="outlined-size-small"
-                        defaultValue="Small 123"
-                        variant="outlined"
-                        size="small"
-                        disableUnderline
-                        />
-                <span>&nbsp;&nbsp;</span>
-                <Button size="medium" variant="contained" color="primary">Search</Button>
+                    <span>&nbsp;&nbsp;</span>
+                    <TextField
+                            label=""  id="outlined-size-small" defaultValue="" variant="outlined" size="small" disableUnderline />
+                    <span>&nbsp;&nbsp;</span>
+                    <Button size="medium" variant="contained" color="primary">Search</Button>
+                </form>
 
                 <hr/>
                 <hr/>

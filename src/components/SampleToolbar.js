@@ -11,6 +11,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
+import BsButton from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const myHook = makeStyles({
 //     root: {
@@ -217,6 +219,15 @@ class SampleToolbar extends Component {
                         />
                     </FormControl>
                 </form>
+                <hr/>
+                <h2>Bootstrap toolbar</h2>
+                
+                <BsButton variant="primary">Primary</BsButton>{' '}
+                <BsButton variant="warning">Warning</BsButton>{' '}
+
+                <Button variant="contained" color="primary">This is material </Button>
+                
+                <a href='https://react-bootstrap.github.io/components/buttons/'>See React Bootstrap page</a>
                 <hr/>
             </div>
             

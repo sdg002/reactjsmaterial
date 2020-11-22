@@ -12,6 +12,10 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
 import BsButton from 'react-bootstrap/Button';
+import BsForm from 'react-bootstrap/Form';
+import BsCol from 'react-bootstrap/Col';
+import BsInputGroup from 'react-bootstrap/InputGroup';
+import BsFormControl from 'react-bootstrap/FormControl';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const myHook = makeStyles({
@@ -220,7 +224,7 @@ class SampleToolbar extends Component {
                     </FormControl>
                 </form>
                 <hr/>
-                <h2>Bootstrap toolbar</h2>
+                <h2>Bootstrap buttons along side material</h2>
                 
                 <BsButton variant="primary">Primary</BsButton>{' '}
                 <BsButton variant="warning">Warning</BsButton>{' '}
@@ -229,6 +233,100 @@ class SampleToolbar extends Component {
                 
                 <a href='https://react-bootstrap.github.io/components/buttons/'>See React Bootstrap page</a>
                 <hr/>
+                <h2>Bootstrap inline form 1</h2>
+                <BsForm inline>
+                    <BsForm.Label htmlFor="searchFields" >
+                        Select search field
+                    </BsForm.Label>
+                    <BsForm.Control
+                        as="select"
+                        className="mb-1 ml-2 mr-2 "
+                        id="searchFields"
+                        custom
+                    >
+                        <option value="0">Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </BsForm.Control>
+
+                    <BsForm.Control
+                        className="mb-2 mr-sm-2"
+                        id="inlineFormInputName2"
+                        placeholder="Search parameter"
+                    />
+                    <BsButton type="submit" className="mb-2">Search</BsButton>{' '}                    
+                </BsForm>
+                <hr/>
+                <h2>Bootstrap inline form 2</h2>
+                <BsForm>
+                    <BsForm.Row className="align-items-center">
+                        <BsCol xs="auto">
+                            <BsForm.Label htmlFor="inlineFormInput" srOnly>
+                                Name
+                            </BsForm.Label>
+                            <BsForm.Control
+                                className="mb-2"
+                                id="inlineFormInput"
+                                placeholder="Jane Doe"
+                            />
+                        </BsCol>    
+                        <BsCol xs="auto">
+                            <BsForm.Label htmlFor="inlineFormInputGroup" srOnly>
+                                Username
+                            </BsForm.Label>
+                            <BsInputGroup className="mb-2">
+                                <BsInputGroup.Prepend>
+                                <BsInputGroup.Text>@</BsInputGroup.Text></BsInputGroup.Prepend>
+                                <BsFormControl id="inlineFormInputGroup" placeholder="Username" />
+                            </BsInputGroup>
+                        </BsCol>
+
+                        <BsCol xs="auto">
+                            <BsForm.Label htmlFor="inlineFormInputGroup001" >
+                                My username
+                            </BsForm.Label>
+                        </BsCol>                                   
+                        <BsCol xs="auto">
+                            <BsForm.Control
+                                    className="mb-2"
+                                    id="inlineFormInputGroup001"
+                                    placeholder="My input"
+                                />
+                        </BsCol>                                   
+
+                        <BsCol xs="auto">
+                            <BsForm.Label htmlFor="searchFields002" >
+                                Select search fields
+                            </BsForm.Label>
+                        </BsCol>                                   
+                        
+                        <BsCol xs="auto">
+                            <BsForm.Control
+                                as="select"
+                                className="mb-1 ml-2 mr-2"
+                                id="searchFields002"
+                                custom
+                            >
+                                <option value="0">Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </BsForm.Control>
+                        </BsCol>
+
+                        <BsCol xs="auto">
+                            <BsForm.Control
+                                    className="mb-2"
+                                    id="inlineFormInputGroup002"
+                                    placeholder="Search text"
+                                />
+                        </BsCol>                                   
+                        <BsCol xs="auto">
+                            <BsButton type="submit" className="mb-2">Search</BsButton>{' '}    
+                        </BsCol>
+                    </BsForm.Row>
+                </BsForm>
             </div>
             
 

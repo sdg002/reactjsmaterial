@@ -247,3 +247,27 @@ class TopNav2 extends Component {
 - Ensure you `configuration` file has been selected
 - Click the *Play* icon
 
+
+# Using Bootstrap along with Material
+- You will have to add the BS package
+- During import, you should avoid collisions with Material 
+
+```
+    import BsButton from 'react-bootstrap/Button';
+    import BsForm from 'react-bootstrap/Form';
+    import BsCol from 'react-bootstrap/Col';
+    import BsInputGroup from 'react-bootstrap/InputGroup';
+    import BsFormControl from 'react-bootstrap/FormControl';
+    import 'bootstrap/dist/css/bootstrap.min.css';
+
+```
+
+# How to construct an inline form?
+- Two approaches
+- Approach 1 - <BsForm inline>
+- Approach 2 - Using <BsForm.Row className="align-items-center"> inside <BsForm>
+- Attention! - You will need to control the bottom padding of the SELECT field
+
+# Bootstrap padding and margin
+- Refer link https://getbootstrap.com/docs/4.0/utilities/spacing/
+- You can control the margin along Y and also along X

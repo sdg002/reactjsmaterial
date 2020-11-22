@@ -210,3 +210,40 @@ class TopNav2 extends Component {
 # Inline tool bar with - Search drop down, text box and button
 ```
 ```
+
+
+# Debugging with VS Code
+- Click on the Run button
+- You will need to create a new launch.json under .\vscode folder
+- I chose vscode-jest-tests
+
+## Launch config file
+```
+    "configurations": [
+        {
+            "type": "node",
+            "name": "vscode-jest-tests1",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/react-scripts",
+            "args": [
+                "test",
+                "--env=jsdom",
+                "--runInBand"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true
+        },
+
+```
+## How to debug?
+- Ensure you have the above config
+- You should have an unit test code which uses the `test` method
+- Place a break point in this test method
+- Locate the *Play* icon in the left panel.
+- You should see another small *Play* icon on the top of the solution explorer
+- Ensure you `configuration` file has been selected
+- Click the *Play* icon
+
